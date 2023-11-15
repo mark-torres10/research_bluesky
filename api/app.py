@@ -1,4 +1,7 @@
-"""Flask app for API."""
+"""Flask app for API.
+
+Based on https://github.com/MarshalX/bluesky-feed-generator/blob/main/server/app.py
+"""  # noqa
 from flask import Flask, jsonify
 from flask_cors import CORS
 
