@@ -70,7 +70,9 @@ def describe_feed_generator():
 
 @app.route("/xrpc/app.bsky.feed.getFeedSkeleton", methods=["GET"])
 def get_feed_skeleton():
-    feed = request.args.get("feed", default=None, type=str)
+    # feed = request.args.get("feed", default=None, type=str)
+    feed = "at://did:plc:w5mjarupsl6ihdrzwgnzdh4y/app.bsky.feed.generator/time-feed"
+    print(f"Getting feed {feed}")
     algo = algos.get(feed)
     if not algo:
         return "Unsupported algorithm", 400
