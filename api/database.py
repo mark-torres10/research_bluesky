@@ -2,9 +2,8 @@ from datetime import datetime
 
 import peewee
 
-from helper import DB_NAME
 
-db = peewee.SqliteDatabase(DB_NAME)
+db = peewee.SqliteDatabase("feed_database.db")
 
 
 class BaseModel(peewee.Model):
