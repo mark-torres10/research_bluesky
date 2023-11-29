@@ -2,8 +2,12 @@
 from typing import Optional
 
 from algos.helper import CURSOR_EOF
+from api import config
 
 from database import Post
+
+
+uri = config.CHRONOLOGICAL_URI
 
 
 def handler(cursor: Optional[str], limit: int) -> dict:
